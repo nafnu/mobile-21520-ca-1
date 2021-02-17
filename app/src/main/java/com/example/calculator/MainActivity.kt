@@ -15,13 +15,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val calculateButton: Button = findViewById(R.id.calculate_button)
-        calculateButton.setOnClickListener{ addition() }
-
         val num1: EditText = findViewById(R.id.etNum1)
         val num2: EditText = findViewById(R.id.etNum2)
         val result: TextView = findViewById(R.id.tvAnswer)
 
-
+        calculateButton.setOnClickListener{ addition() }
 
     }//onCreate
 
