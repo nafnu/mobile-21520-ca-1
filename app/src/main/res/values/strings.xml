@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="calculate_label">Calculate</string>
+    <string name="app_label">appByNathalieFlores</string>
+    <string name="Calculate_Message_1">Button Clicked to calculate addition</string>
+    <string name="info_label">Just do ADDITIONS</string>
+    <string name="answer_label">Answer</string>
 </resources>

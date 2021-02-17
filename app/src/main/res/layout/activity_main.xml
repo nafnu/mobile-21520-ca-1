@@ -3,18 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Just do ADDITIONS"
-    />
+        android:layout_gravity="center_horizontal"
+        android:textSize="30sp"
+        android:text="@string/info_label"  />
+
+    <EditText
+        android:id="@+id/etNum1"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="number"     />
+
+    <EditText
+        android:id="@+id/etNum2"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="number"    />
 
     <Button
+        android:id="@+id/calculate_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/calculate_label"
-    />
+        android:layout_gravity="center_horizontal"
+        android:text="@string/calculate_label" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/answer_label"
+        android:textSize="32sp"
+        android:layout_gravity="center_horizontal"   />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_label" />
 
 </LinearLayout>
