@@ -2,9 +2,7 @@
     <string name="app_name">Calculator</string>
     <string name="calculate_label">Calculate</string>
     <string name="app_label">appByNathalieFlores</string>
-    <string name="Calculate_Message_1">Button Clicked to calculate addition</string>
-    <string name="info_label">Just do ADDITIONS</string>
-    <string name="answer_label">Answer</string>
+     <string name="answer_label">Result</string>
     <string name="no1_label">Enter NO 1</string>
     <string name="no2_label">Enter NO 2</string>
     <string name="image_label">funCalcuIcon</string>

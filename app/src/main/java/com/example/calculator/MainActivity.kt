@@ -2,11 +2,9 @@ package com.example.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,11 +20,14 @@ class MainActivity : AppCompatActivity() {
         val calculateButton: Button = findViewById(R.id.calculate_button)
         val num1: EditText = findViewById(R.id.etNum1)
         val num2: EditText = findViewById(R.id.etNum2)
-        val result: TextView = findViewById(R.id.tvAnswer)
+        val result: EditText = findViewById(R.id.tvAnswer)
 
         calculateButton.setOnClickListener {
-            result.text = (num1.text.toString() + num2.text.toString())
-            Toast.makeText(this, result.text, Toast.LENGTH_LONG).show()
+            val val1 = num1.text.toString().toInt().toDouble()
+            val val2 = num2.text.toString().toInt().toDouble()
+            val val3 = val1 + val2
+
+            result.setText(val3.toString())
         }
 
     }

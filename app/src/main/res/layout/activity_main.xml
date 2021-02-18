@@ -1,69 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:layout_gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0F0C0"
     tools:context=".MainActivity">
-
-     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:textSize="30sp"
-        android:text="@string/info_label"  />
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="100dp"
         android:layout_gravity="center_horizontal"
         android:contentDescription="@string/image_label"
+        app:layout_constraintBottom_toTopOf="@+id/author_label"
+        app:layout_constraintEnd_toEndOf="@+id/etNum1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/etNum1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/funcalcu" />
-
-
 
     <EditText
         android:id="@+id/etNum1"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:ems="10"
         android:hint="@string/no1_label"
-        android:inputType="phone"
-        android:importantForAutofill="auto"/>
+        android:inputType="number"
+        android:textAlignment="center"
+        android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="@+id/etNum2"
+        app:layout_constraintStart_toStartOf="@+id/etNum2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/etNum2"
+        />
 
     <EditText
         android:id="@+id/etNum2"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:ems="10"
         android:hint="@string/no2_label"
-        android:inputType="phone"
-        android:importantForAutofill="auto"  />
+        android:inputType="number"
+        android:textAlignment="center"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toEndOf="@+id/calculate_button"
+        app:layout_constraintStart_toStartOf="@+id/calculate_button"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button"
+        app:layout_constraintBottom_toTopOf="@+id/calculate_button"/>
+
+
+    <EditText
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/answer_label"
+        android:textSize="25sp"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:importantForAutofill="no"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/calculate_button"/>
 
     <Button
         android:id="@+id/calculate_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/calculate_label" />
+        android:layout_gravity="center"
+        android:text="@string/calculate_label"
+        app:layout_constraintEnd_toEndOf="@+id/tvAnswer"
+        app:layout_constraintStart_toStartOf="@+id/tvAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/etNum2"
+        app:layout_constraintBottom_toTopOf="@+id/tvAnswer"/>
 
     <TextView
-        android:id="@+id/tvAnswer"
+        android:id="@+id/author_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/answer_label"
-        android:textSize="32sp"
-        android:layout_gravity="center_horizontal"   />
+        android:text="@string/app_label"
+        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_label" />
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
